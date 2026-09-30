@@ -1,0 +1,9 @@
+body{
+    background-image:url("https://th.bing.com/th/id/OIP.klFA7AZWfeUF_Z3IdAkTLgHaE8?w=225&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.title {
+    color :blue;
+}

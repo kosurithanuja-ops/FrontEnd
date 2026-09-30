@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kosuri Thanuja Resume</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #eeeeee;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111111;
+        }
+
+        .resume {
+            width: 1000px;
+            min-height: 1400px;
+            margin: auto;
+            padding: 28px 38px;
+            background: white;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .designation {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 4px;
+            margin-bottom: 14px;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            font-size: 17px;
+            margin: 6px 0;
+        }
+
+        .contact-row i {
+            font-size: 17px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        .links a {
+            color: #111111;
+            text-decoration: none;
+        }
+
+        .links i {
+            margin-right: 7px;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        .section {
+            border-top: 1.5px solid #222;
+            margin-top: 17px;
+            padding-top: 9px;
+        }
+
+        .section-title {
+            font-size: 25px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+        }
+
+        /* ================= SUMMARY ================= */
+
+        .summary {
+            font-size: 17px;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        .skills-table td {
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .skill-name {
+            width: 230px;
+            font-weight: bold;
+        }
+
+        .colon {
+            width: 25px;
+            text-align: center;
+        }
+
+        /* ================= EDUCATION ================= */
+
+        .education-item {
+            position: relative;
+            padding-left: 38px;
+            margin-bottom: 13px;
+        }
+
+        .education-item::before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            top: -3px;
+            font-size: 28px;
+        }
+
+        .education-main {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .education-main .cgpa {
+            font-weight: normal;
+            margin-left: 8px;
+        }
+
+        .education-date {
+            float: right;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .education-college {
+            font-size: 16px;
+            margin-top: 3px;
+        }
+
+        /* ================= CERTIFICATIONS ================= */
+
+        .certifications {
+            margin: 0;
+            padding-left: 25px;
+        }
+
+        .certifications li {
+            font-size: 17px;
+            margin: 6px 0;
+        }
+
+        /* ================= PROJECT ================= */
+
+        .project {
+            padding-left: 38px;
+        }
+
+        .project-title {
+            position: relative;
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .project-title::before {
+            content: "•";
+            position: absolute;
+            left: -31px;
+            top: -3px;
+            font-size: 27px;
+        }
+
+        .project-date {
+            float: right;
+            font-weight: normal;
+        }
+
+        .project-description {
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 0 0 10px 0;
+        }
+
+        .topics-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 8px 0 5px 0;
+        }
+
+        /* Two column topics */
+
+        .topics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 35px;
+        }
+
+        .topics ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .topics li {
+            font-size: 15px;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        /* ================= LANGUAGES ================= */
+
+        .languages {
+            margin: 0;
+            padding-left: 25px;
+        }
+
+        .languages li {
+            font-size: 17px;
+            margin: 5px 0;
+        }
+
+        /* ================= PRINT ================= */
+
+        @media print {
+
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume {
+                width: 100%;
+                min-height: auto;
+                padding: 25px 35px;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="resume">
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="header">
+
+        <h1>Kosuri Thanuja</h1>
+
+        <div class="designation">
+            Aspiring ServiceNow Developer&nbsp; | &nbsp;B.Tech CSE Student
+        </div>
+
+        <div class="contact-row">
+
+            <span>
+                <i class="fa-solid fa-phone"></i>
+                +91 8309261107
+            </span>
+
+            <span>|</span>
+
+            <span>
+                <i class="fa-solid fa-envelope"></i>
+                kosurithanuja@gmail.com
+            </span>
+
+        </div>
+
+
+        <div class="contact-row">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Guntur, Andhra Pradesh, India
+            </span>
+
+        </div>
+
+
+        <div class="links">
+
+            <a href="https://www.linkedin.com/in/thanuja-kosuri-61a7a8329"
+               target="_blank">
+
+                <i class="fa-brands fa-linkedin"></i>
+                linkedin.com/in/thanuja-kosuri-61a7a8329
+
+            </a>
+
+            <span>|</span>
+
+            <a href="https://github.com/kosurithanuja-ops"
+               target="_blank">
+
+                <i class="fa-brands fa-github"></i>
+                github.com/kosurithanuja-ops
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SUMMARY ================= -->
+
+    <div class="section">
+
+        <h2 class="section-title">
+            Summary
+        </h2>
+
+        <p class="summary">
+            Enthusiastic and motivated B.Tech CSE student with a strong interest
+            in ServiceNow development and problem solving. Skilled in creating
+            tables, forms, workflows, ACLs and automating business processes
+            using ServiceNow. Eager to apply my technical skills and learn new
+            technologies to contribute to meaningful projects and grow as a
+            professional.
+        </p>
+
+    </div>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <div class="section">
+
+        <h2 class="section-title">
+            Skills
+        </h2>
+
+        <table class="skills-table">
+
+            <tr>
+                <td class="skill-name">ServiceNow</td>
+                <td class="colon">:</td>
+                <td>
+                    Client Scripts, Business Rules, ACLs, Workflows,
+                    Flow Designer, Notifications, Catalogs, Tables,
+                    Forms, UI Policies, Reports, Dashboards, Service Portal
+                </td>
+            </tr>
+
+            <tr>
+                <td class="skill-name">Programming</td>
+                <td class="colon">:</td>
+                <td>
+                    Java, SQL
+                </td>
+            </tr>
+
+            <tr>
+                <td class="skill-name">Database</td>
+                <td class="colon">:</td>
+                <td>
+                    MySQL (Basics), Database Concepts
+                </td>
+            </tr>
+
+            <tr>
+                <td class="skill-name">Web Technologies</td>
+                <td class="colon">:</td>
+                <td>
+                    HTML, JavaScript (Basics)
+                </td>
+            </tr>
+
+            <tr>
+                <td class="skill-name">Other Skills</td>
+                <td class="colon">:</td>
+                <td>
+                    Problem Solving, Communication, Teamwork
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <div class="section">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+
+        <div class="education-item">
+
+            <div class="education-main">
+
+                Bachelor of Technology (B.Tech)
+
+                <span class="cgpa">
+                    | &nbsp;CGPA - 8.22
+                </span>
+
+                <span class="education-date">
+                    2023 - 2027
+                </span>
+
+            </div>
+
+            <div class="education-college">
+                Chalapathi Institute of Engineering and Technology,
+                Guntur, Andhra Pradesh, India
+            </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <div class="education-main">
+
+                Intermediate (MPC)
+
+                <span class="cgpa">
+                    | &nbsp;CGPA - 8.59
+                </span>
+
+                <span class="education-date">
+                    2021 - 2023
+                </span>
+
+            </div>
+
+            <div class="education-college">
+                Narayana Junior College, Bapatla,
+                Andhra Pradesh, India
+            </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <div class="education-main">
+
+                Secondary Education
+
+                <span class="cgpa">
+                    | &nbsp;CGPA - 10
+                </span>
+
+                <span class="education-date">
+                    2020 - 2021
+                </span>
+
+            </div>
+
+            <div class="education-college">
+                Narayana English Medium High School, Bapatla,
+                Andhra Pradesh, India
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CERTIFICATIONS ================= -->
+
+    <div class="section">
+
+        <h2 class="section-title">
+            Certifications
+        </h2>
+
+        <ul class="certifications">
+
+            <li>
+                ServiceNow Certified System Administrator (CSA)
+            </li>
+
+            <li>
+                ServiceNow Certified Application Developer (CAD)
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- ================= PROJECT EXPERIENCE ================= -->
+
+    <div class="section">
+
+        <h2 class="section-title">
+            Project Experience
+        </h2>
+
+
+        <div class="project">
+
+            <div class="project-title">
+
+                Employee Laptop Request Management System
+
+                <span class="project-date">
+                    2024 - 2025
+                </span>
+
+            </div>
+
+
+            <p class="project-description">
+
+                Developed a ServiceNow application to manage employee laptop
+                requests efficiently from submission to approval and closure.
+                Built custom tables, forms, workflows and business rules to
+                automate the process, notify stakeholders and ensure secure
+                access.
+
+            </p>
+
+
+            <div class="topics-title">
+                Key Features &amp; Topics Used:
+            </div>
+
+
+            <div class="topics">
+
+                <div>
+
+                    <ul>
+
+                        <li>
+                            Application and custom tables
+                            (u_laptop_request_form)
+                        </li>
+
+                        <li>
+                            Catalog Item, Variables and Form Designer
+                        </li>
+
+                        <li>
+                            Client Scripts (form validation)
+                        </li>
+
+                        <li>
+                            Flow Designer (workflow automation)
+                        </li>
+
+                        <li>
+                            Business Rules (duplicate request validation)
+                        </li>
+
+                        <li>
+                            Approval Process (Manager Approval)
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <ul>
+
+                        <li>
+                            Notifications (submission, approval, rejection)
+                        </li>
+
+                        <li>
+                            User Roles and Groups
+                            (it_manager, it_employee)
+                        </li>
+
+                        <li>
+                            ACLs &amp; Security (access control)
+                        </li>
+
+                        <li>
+                            Update Set (deployment)
+                        </li>
+
+                        <li>
+                            Email Notifications (to requester and IT team)
+                        </li>
+
+                        <li>
+                            Reports &amp; Dashboards
+                            (request status, approval metrics)
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= LANGUAGES ================= -->
+
+    <div class="section">
+
+        <h2 class="section-title">
+            Languages
+        </h2>
+
+        <ul class="languages">
+
+            <li>
+                English, Telugu
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+</html>
